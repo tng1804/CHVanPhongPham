@@ -17,7 +17,7 @@ class KhachHang extends Controller
         // Đổ ra view
         $this->view("frmListKH", [
             "KH" => $KH_Model->ListKH()
-        ]);//
+        ]);
     }
     function AddKH()
     {
