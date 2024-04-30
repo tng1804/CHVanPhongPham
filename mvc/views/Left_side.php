@@ -4,7 +4,7 @@
     <div>
 
       <h3 class="app-sidebar__user-name"></h3>
-      <p class="app-sidebar__user-designation">Chào mừng Đại trở lại</p>
+      <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
     </div>
   </div>
   <hr>
