@@ -67,10 +67,10 @@ class KhachHangModel extends DB
             } else {
                 echo "Cập nhập dữ liệu thành công.";
                 // Thông báo thành công
-                echo "<script>
-                alert('Cập nhật dữ liệu thành công');
-                window.location.href = '/VANPHONGPHAM/KhachHang/listKH';
-                </script>";
+                    echo "<script>
+                    alert('Cập nhật dữ liệu thành công');
+                    window.location.href = '/VANPHONGPHAM/KhachHang/listKH';
+                    </script>";
             }
         }
     }
