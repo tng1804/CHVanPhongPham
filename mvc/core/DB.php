@@ -4,7 +4,7 @@
         protected $servername = "localhost";
         protected $username = "root";
         protected $password = "";
-        protected $dbname = "chvanphongpham";
+        protected $dbname = "vppstore";
 
         function __construct(){
             $this->con = mysqli_connect($this->servername, $this->username, $this->password);

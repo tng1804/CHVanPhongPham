@@ -10,7 +10,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <script src="https://kit.fontawesome.com/b94913fe08.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +25,9 @@
     <title>Phần mềm quản lý bán hàng</title>
 </head>
 <body>
-    <style>
-        :root {
+
+<style>
+    :root {
     --primary-color: rgb(243, 40, 40);
     --white-color: #fff;
     --black-color: #000;
@@ -441,10 +443,7 @@ b:hover {
     transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), transform 0.2s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
     transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), transform 0.2s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.2s cubic-bezier(0.35, 0, 0.25, 1);
 }
-.action-link {
-    display: inline-block; /* Hiển thị như một phần tử inline, cho phép chúng nằm cạnh nhau */
-   /* margin-right: 0px; Khoảng cách 40px giữa các phần tử*/
-}
+
 .col-sm-12 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
@@ -795,4 +794,4 @@ b:hover {
     background-color: #ebebeb;
     cursor: pointer;
 }
-        </style>
+</style>

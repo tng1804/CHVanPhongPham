@@ -15,8 +15,8 @@ class LoaiSanPhamModel extends DB{
                echo "<script type='text/javascript'>alert('Thêm thất bại')</script>";
            } else{
                echo "<script type='text/javascript'>alert('Thêm thành công');
-                window.history.pushState(null, '', '/VanPhongPham/LoaiSanPham/Show');
-                window.location.href = '/VanPhongPham/LoaiSanPham/Show';
+                window.history.pushState(null, '', '/CHVanPhongPham/LoaiSanPham/Show');
+                window.location.href = '/CHVanPhongPham/LoaiSanPham/Show';
                </script>";
        }
    
@@ -40,8 +40,8 @@ class LoaiSanPhamModel extends DB{
               echo "<script type='text/javascript'>alert('Sửa loại sản phẩm thất bại')</script>";
           } else{
               echo "<script type='text/javascript'>alert('Sửa loại sản phẩm thành công');
-              window.history.pushState(null, '', '/VanPhongPham/LoaiSanPham/Show');
-                window.location.href = '/VanPhongPham/LoaiSanPham/Show';
+              window.history.pushState(null, '', '/CHVanPhongPham/LoaiSanPham/Show');
+                window.location.href = '/CHVanPhongPham/LoaiSanPham/Show';
               </script>";
       }         
       } 
@@ -57,8 +57,8 @@ class LoaiSanPhamModel extends DB{
         $sql1="DELETE FROM tblsanpham WHERE loaisp_id ='".$id_loaisp."'"; 
         $result1 = mysqli_query($this->con,$sql1);
             echo"<script type='text/javascript'>alert('Xoá loại sản phẩm thành công');
-            window.history.pushState(null, '', '/VanPhongPham/LoaiSanPham/Show');
-            window.location.href = '/VanPhongPham/LoaiSanPham/Show';
+            window.history.pushState(null, '', '/CHVanPhongPham/LoaiSanPham/Show');
+            window.location.href = '/CHVanPhongPham/LoaiSanPham/Show';
         </script>";
 
     }

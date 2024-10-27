@@ -1,58 +1,44 @@
 <?php
 
-class TaiKhoan extends Controller{
+class TaiKhoan extends Controller
+{
     // Must have SayHi()
-    function SayHi(){
+    function SayHi()
+    {
         $taikhoanmodel = $this->model("TaiKhoanModel");
-        $this->ShowListTK();
+        $this->Show();
     }
 
-    function ShowListTK(){        
+    function Show()
+    {
         // Call Models
-         $taikhoanmodel = $this->model("TaiKhoanModel");
-        $this->view("TaiKhoanfrm", [
+        $taikhoanmodel = $this->model("TaiKhoanModel");
+        $this->view("Admin/frmTaiKhoan", [
             "TK" => $taikhoanmodel->listTaiKhoan()
         ]);
-        //$this->view("timkiemTK", ["TK"=>$taikhoanmodel->searchTK()]);
     }
 
-    function addTK(){
-        $this->view("createAccoutNV", []);
+    function addTK()
+    {
+        $this->view("Admin/frmThemTaiKhoan", []);
         $taikhoanmodel = $this->model("TaiKhoanModel");
         $taikhoanmodel->themTaiKhoan();
-        
     }
-    function editTK($id_taikhoan){
+    function editTK($id_taikhoan)
+    {
         $taikhoanmodel = $this->model("TaiKhoanModel");
-        $this->view("EditTaiKhoan", [
+        $this->view("Admin/frmEditTaiKhoan", [
             "TK" => $taikhoanmodel->showEditTK($id_taikhoan)
         ]);
-        $taikhoanmodel->editTK($id_taikhoan);
-        
     }
-    function deleteTK($id_taikhoan){
+    function deleteTK($id_taikhoan)
+    {
         $taikhoanmodel = $this->model("TaiKhoanModel");
         $taikhoanmodel->deleteTK($id_taikhoan);
     }
-    // function Searchfrm(){        
-    //     // Call Models
-    //     $taikhoanmodel = $this->model("TaiKhoanModel");
-       
-         
-    //     $this->view("timkiemTK", [
-    //         "TK" => $taikhoanmodel->SearchTK()
-    //     ]);
-    //    // $taikhoanmodel->SearchTK();
-    // }
-    function searchTK(){
+    function searchTK()
+    {
         $taikhoanmodel = $this->model("TaiKhoanModel");
-        $this->view("timkiemTK", ["TK"=>$taikhoanmodel->searchTK()]); 
+        $this->view("Admin/frmTimkiemTK", ["TK" => $taikhoanmodel->searchTK()]);
     }
-    function sapxepTK(){
-        $taikhoanmodel = $this->model("TaiKhoanModel");
-        $this->view("sapxepTK", ["TK"=>$taikhoanmodel->sapxepTK()]); 
-    }
-
-    
 }
-?>

@@ -14,7 +14,7 @@ class LoaiSanPham extends Controller{
         $loaiSanPhammodel = $this->model("LoaiSanPhamModel");
 
         // Call Views
-        $this->view("frmInfoLoaiSP", [
+        $this->viewAdmin("frmInfoLoaiSP", [
             "LoaiSP"=>$loaiSanPhammodel->LoaiSanPhamList()
         ]);
     }
@@ -22,7 +22,7 @@ class LoaiSanPham extends Controller{
     function addLoaiSP(){
         $loaiSanPhammodel = $this->model("LoaiSanPhamModel");
         // Call Views
-        $this->view("frmThemLoaiSP", [
+        $this->viewAdmin("frmThemLoaiSP", [
         ]);
         $loaiSanPhammodel->themLoaiSanPham();
     }
@@ -30,7 +30,7 @@ class LoaiSanPham extends Controller{
     function editLoaiSP($id_loaisp){
         $loaiSanPhammodel = $this->model("LoaiSanPhamModel");
         // Call Views
-        $this->view("frmSuaLoaiSP", [
+        $this->viewAdmin("frmSuaLoaiSP", [
             "LoaiSP"=>$loaiSanPhammodel->getEdit($id_loaisp)
         ]);
         $loaiSanPhammodel->suaLoaiSanPham($id_loaisp);
@@ -43,7 +43,7 @@ class LoaiSanPham extends Controller{
 
     function searchLoaiSP(){
         $loaiSanPhammodel = $this->model("LoaiSanPhamModel");
-        $this->view("frmTimKiemLoaiSP", ["DL"=>$loaiSanPhammodel->timKiemLoaiSP()]);
+        $this->viewAdmin("frmTimKiemLoaiSP", ["DL"=>$loaiSanPhammodel->timKiemLoaiSP()]);
         //$loaiSanPhammodel->timKiemLoaiSP();
     }
 

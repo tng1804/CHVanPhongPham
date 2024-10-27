@@ -8,43 +8,28 @@ class SanPham extends Controller{
     function SayHi(){
         // Call Models
         $teo = $this->model("SanPhamModel");
-        //$tong = $teo->Tong($a, $b); // 3
-
-        // Call Views
-        $this->view("SanPhamView",
+        $this->viewAdmin("SanPhamView",
         ["SP"=>$teo->listSanPham()]
         );
 
     }
 
     function Show(){        
-        // Call Models
         $teo = $this->model("SanPhamModel");
-        //$tong = $teo->Tong($a, $b); // 3
-
-        // Call Views
-        $this->view("SanPhamView",
+        $this->viewAdmin("SanPhamView",
         ["SP"=>$teo->listSanPham()]
         );
     }
-        function Add(){        
-            // Call Models
-            $teo = $this->model("SanPhamModel");
-            //$tong = $teo->Tong($a, $b); // 3
-    
-            // Call Views
-            $this->view("SanPhamAdd",
-            []
-            );
-            $teo->themSanPham();
-        }
-
+        // function Add(){        
+        //     $teo = $this->model("SanPhamModel");
+        //     $this->viewAdmin("SanPhamAdd",
+        //     []
+        //     );
+        //     $teo->themSanPham();
+        // }
         function Edit($id_sanpham){
             $teo = $this->model("SanPhamModel");
-            //$tong = $teo->Tong($a, $b); // 3
-    
-            // Call Views
-            $this->view("SanPhamEdit",
+            $this->viewAdmin("SanPhamEdit",
             ["SP"=>$teo->showEdit($id_sanpham)]
             );
             $teo->suaSanPham($id_sanpham);
@@ -52,24 +37,31 @@ class SanPham extends Controller{
 
         function Delete($id_sanpham){
             $teo = $this->model("SanPhamModel");
-            //$tong = $teo->Tong($a, $b); // 3
-    
-            // Call model
             $teo->xoaSanPham($id_sanpham);
         }
 
         function Search(){
             $teo = $this->model("SanPhamModel");
-            $this->view("SanPhamSearch", 
+            $this->viewAdmin("SanPhamSearch", 
             ["SP"=>$teo->timKiemSanPham()]);
             //$loaiSanPhammodel->timKiemLoaiSP();
         }
-
+        function Getloaisp(){
+             $teo = $this ->model("SanPhamModel");
+             $data = $teo->getAllLoaiSanPham();
+             header('Content-Type: application/json');
+             echo json_encode($data);
+        }
+        function GetNCC(){
+            $teo = $this ->model("SanPhamModel");
+            $data = $teo->getNCC();
+            header('Content-Type: application/json');
+            echo json_encode($data);     
+          }
         function Sort()
         {
-            // Gọi ra model
             $teo = $this->model("SanPhamModel");
-            $this->view("SanPhamSort", ["SP" => $teo->SortSP()
+            $this->viewAdmin("SanPhamSort", ["SP" => $teo->SortSP()
         ]);
     
         }
